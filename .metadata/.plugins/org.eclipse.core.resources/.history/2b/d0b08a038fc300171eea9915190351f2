@@ -1,0 +1,9 @@
+package Programs;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+
+@Entity(name="Student")
+public class StudentHibernate {
+	
+}

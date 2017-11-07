@@ -1,0 +1,13 @@
+package Programs;
+
+import Dao.DaoUtility;
+
+public class Insert {
+	public static void main(String[] args) {
+		boolean insert=DaoUtility.insertStudent();
+		if(insert)
+		{
+			System.out.println("Data is inserted.");
+		}
+	}
+}

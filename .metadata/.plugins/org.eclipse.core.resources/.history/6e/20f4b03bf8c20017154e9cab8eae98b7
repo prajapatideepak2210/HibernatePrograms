@@ -1,0 +1,13 @@
+package com.bridgelabz.programs;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Configuration configure=new Configuration(); 
+		configure.configure("hibernate.cfg.xml");
+	}
+}

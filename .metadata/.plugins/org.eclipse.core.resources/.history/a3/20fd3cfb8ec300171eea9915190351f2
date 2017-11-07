@@ -1,0 +1,9 @@
+package Programs;
+
+import javax.persistence.Entity;
+
+@Entity(name="Student")
+public class StudentHibernate {
+	private int id, age;
+	private String name, address;
+}

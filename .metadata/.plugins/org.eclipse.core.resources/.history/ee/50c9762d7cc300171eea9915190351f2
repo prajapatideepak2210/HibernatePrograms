@@ -1,0 +1,45 @@
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.model.EmployeeBean;
+
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Configuration configure=new Configuration(); 
+		configure.configure("hibernate.cfg.xml");
+		SessionFactory factory=configure.buildSessionFactory();  
+		
+		Session session = factory.openSession();
+		Transaction tr = session.beginTransaction();
+		EmployeeBean emp=new EmployeeBean();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the id : ");
+		int id=scanner.nextInt();
+		emp.setId(id);
+		System.out.println("Enter the name : ");
+		String name=scanner.nextLine();
+		emp.setName(name);
+		System.out.println("Enter the name : ");
+		int age=scanner.nextInt();
+		emp.setAge(age);
+		System.out.println("Enter the name : ");
+		long salary=scanner.nextLong();
+		emp.setSalary(salary);
+		
+		session.save(emp);
+		tr.commit();
+		System.out.println("success");
+		
+		session.close();
+		
+	}
+}

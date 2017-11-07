@@ -1,0 +1,12 @@
+package Dao;
+
+import Model.Student;
+
+public class DaoUtility {
+	public static void insertStudent()
+	{
+		Confi
+		Student student=new Student();
+		
+	}
+}

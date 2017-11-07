@@ -1,0 +1,18 @@
+package Programs;
+
+import Dao.DaoUtility;
+
+/**
+ * @author Deepak Prajapati
+ *
+ * @Description Here you will Insert the new Student, wITH SOME DETAILS.
+ */
+public class Insert {
+	public static void main(String[] args) {
+		boolean insert=DaoUtility.insertStudent();
+		if(insert)
+		{
+			System.out.println("Data is inserted.");
+		}
+	}
+}

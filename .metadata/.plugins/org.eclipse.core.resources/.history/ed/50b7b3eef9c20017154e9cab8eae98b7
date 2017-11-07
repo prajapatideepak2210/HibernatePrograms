@@ -1,0 +1,29 @@
+package com.bridgelabz.programs;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.model.EmployeeBean;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Configuration configure=new Configuration(); 
+		configure.configure("hibernate.cfg.xml");
+		SessionFactory factory=configure.buildSessionFactory();  
+		
+		Session session = factory.openSession();
+		Transaction tr = session.beginTransaction();
+		EmployeeBean emp = new EmployeeBean();
+		emp.setName("Deepak");
+		emp.setAge(26);
+		emp.setSalary(30000);
+		tr.commit();
+		session.save(emp);
+		System.out.println("success");
+		session.close();
+	}
+}
