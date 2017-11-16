@@ -1,0 +1,58 @@
+package com.bridgelabz.controller;
+
+import java.util.Scanner;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.model.Address;
+import com.bridgelabz.model.Employee;
+
+public class Store {
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+	    Configuration cfg=new Configuration();  
+	    cfg.configure("hibernate.cfg.xml");
+	    SessionFactory sf=cfg.buildSessionFactory();  
+	    Session session=sf.openSession();  
+	    Transaction tx=session.beginTransaction();  
+	      
+	    Employee e1=new Employee();
+	    System.out.println("Enter the Employee name : ");
+	    String name=scanner.nextLine();
+	    e1.setName(name);
+	    System.out.println("Enter the Employee email id : ");
+	    String email=scanner.nextLine();
+	    e1.setEmail(email);  
+	      
+	    Address address1=new Address();
+	    System.out.println("Enter the Employee address line : ");
+	    String line1=scanner.nextLine();
+	    address1.setAddressLine1(line1);
+	    System.out.println("Enter the Employee city : ");
+	    String city=scanner.nextLine();
+	    address1.setCity(city);
+	    System.out.println("Enter the Employee state : ");
+	    String state=scanner.nextLine();
+	    address1.setState(state);
+	    System.out.println("Enter the Employee country : ");
+	    String country=scanner.nextLine();
+	    address1.setCountry(country);
+	    System.out.println("Enter the Employee pincode : ");
+	    int pincode=scanner.nextInt();
+	    address1.setPincode(pincode);  
+	      
+	      
+	    e1.setAddress(address1);  
+	    address1.setEmployee(e1);  
+	      
+	    session.persist(e1);  
+	    tx.commit();  
+	      
+	    session.close();  
+	    System.out.println("success");  
+	}  
+
+}

@@ -45,6 +45,7 @@
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
 			<item value="/home/bridgeit/Deepak Programs/HibernatePrograms"/>
+			<item value="/home/bridgeit/Deepak Programs/HibernatePrograms/Servers"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -57,12 +58,18 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.brigelabz.HibernateCrud"/>
+			<item value="com.brigelabz.HibernateDelete"/>
+			<item value="com.brigelabz.com.bridgelabz"/>
 			<item value="com.brigelabz.Hibernate"/>
 		</list>
 		<list key="groupId">
 			<item value="com.brigelabz"/>
 		</list>
 		<list key="artifactId">
+			<item value="HibernateCrud"/>
+			<item value="HibernateDelete"/>
+			<item value="com.bridgelabz"/>
 			<item value="Hibernate"/>
 		</list>
 		<list key="projectNameTemplate">

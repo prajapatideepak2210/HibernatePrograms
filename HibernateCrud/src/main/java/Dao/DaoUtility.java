@@ -1,11 +1,15 @@
 package Dao;
 
+import java.util.List;
 import java.util.Scanner;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Restrictions;
+import org.hibernate.query.Query;
 
 import Model.Student;
 
@@ -123,5 +127,43 @@ public class DaoUtility {
 		
 		session.close();
 		return check;
+	}
+	
+	/**
+	 * @return List
+	 * @Description It will return all the List Of Student.
+	 */
+	@SuppressWarnings("unchecked")
+	public List<Student> getStudents()
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		SessionFactory sessionFactory=configuration.buildSessionFactory();
+		Session session=sessionFactory.openSession();
+		Query<Student> query=session.createQuery("from Student");
+		List<Student> list=query.list();
+		session.close();
+		return list;
+	}
+	
+	/**
+	 * @param address
+	 * @return List
+	 * @Description It will all the students list whose address is same which is provided by user.
+	 */
+	@SuppressWarnings({ "deprecation", "unchecked" })
+	public List<Student> getStudentByAddess(String address)
+	{
+		Configuration configuratio=new Configuration();
+		SessionFactory sessionFactory=configuratio.buildSessionFactory();
+		Session session=sessionFactory.openSession();
+		
+		
+		Criteria c=session.createCriteria(Student.class);  
+		c.add(Restrictions.gt("address",address));//salary is the propertyname  
+		List list=c.list();  
+		
+		
+		return list;
 	}
 }

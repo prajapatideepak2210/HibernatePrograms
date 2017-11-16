@@ -1,0 +1,8 @@
+package com.bridgelabz.model;
+
+public class Address {
+	private int addressId;  
+	private String addressLine1,city,state,country;  
+	private int pincode;  
+	private Employee employee;  
+}

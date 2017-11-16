@@ -1,0 +1,12 @@
+package Programs;
+
+import java.util.List;
+
+import Dao.DaoUtility;
+
+public class GetAllStudent {
+	public static void main(String[] args) {
+		DaoUtility utility=new DaoUtility();
+		List<Student> list=utility.getStudents();
+	}
+}

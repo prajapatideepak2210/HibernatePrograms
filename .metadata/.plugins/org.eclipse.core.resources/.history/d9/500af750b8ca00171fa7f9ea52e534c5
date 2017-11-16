@@ -1,0 +1,16 @@
+package Programs;
+
+import java.util.List;
+import java.util.Scanner;
+
+import Dao.DaoUtility;
+import Model.Student;
+
+public class GetStudentByAddress {
+	public static void main(String[] args) {
+		DaoUtility utility=new DaoUtility();
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the address of Student : ");
+		List<Student> list=utility.getStudentByAddess("")
+	}
+}
