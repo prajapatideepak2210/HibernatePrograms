@@ -5,21 +5,26 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
 import com.bridgelabz.model.Address;
 import com.bridgelabz.model.Employee;
 
+/**
+ * @author Deepak Prajapati
+ * @Description This method is used to fetch all the data from the database.
+ *
+ */
 public class Fetch {
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {  
 	    Configuration configuration=new Configuration();  
 	    configuration.configure("hibernate.cfg.xml");  
 	    SessionFactory sessionFactory=configuration.buildSessionFactory();  
 	    Session session=sessionFactory.openSession();  
 	      
-	    Query query=session.createQuery("from Employee e");  
+	    Query<Employee> query=session.createQuery("from Employee");  
 	    List<Employee> list=query.list();  
 	      
 	    Iterator<Employee> iterator=list.iterator();  

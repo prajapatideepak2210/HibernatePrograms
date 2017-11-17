@@ -1,0 +1,53 @@
+package com.bridgelabz.dao;
+
+import java.util.Scanner;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.model.Employee;
+import com.bridgelabz.model.Vehicle;
+
+public class EmployeeDao{
+	@SuppressWarnings("resource")
+	public boolean insert()
+	{
+		boolean check=false;
+		Scanner scanner=new Scanner(System.in);
+		Employee employee=new Employee();
+		
+		System.out.println("Enter the EmployeeName : ");
+		String employeeName=scanner.nextLine();
+		employee.setName(employeeName);
+		
+		System.out.println("Enter the EmployeeGender : ");
+		String gender=scanner.nextLine();
+		employee.setGender(gender);
+		
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		SessionFactory sessionFactory=configuration.buildSessionFactory();
+		Session session=sessionFactory.openSession();
+		
+		int id = (Integer) session.save(employee);
+		employee = session.get(Employee.class, id);
+		System.out.println("how many vehicle do you have : ");
+		int numberOfVehicle=scanner.nextInt();
+		scanner.nextLine();
+		for(int i=0; i<numberOfVehicle; i++)
+		{
+			Vehicle vehicle = new Vehicle();
+			Transaction transaction=session.beginTransaction();
+			System.out.println("Enter "+(i+1)+"th vehicle Name : ");
+			String vehicleName=scanner.nextLine();
+			vehicle.setVehicleName(vehicleName);
+			vehicle.setEmployee(employee);
+			session.save(vehicle);
+			transaction.commit();
+			
+		}
+		return check;
+	}
+}

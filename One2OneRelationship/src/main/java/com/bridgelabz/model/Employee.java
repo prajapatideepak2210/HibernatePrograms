@@ -1,5 +1,10 @@
 package com.bridgelabz.model;
 
+/**
+ * @author Deepak Prajapati
+ * @Description This class is a model class here you will find some properties of Employee.
+ *
+ */
 public class Employee {
 	
 	private int employeeId;  

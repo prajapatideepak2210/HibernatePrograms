@@ -10,7 +10,18 @@ import org.hibernate.cfg.Configuration;
 import com.bridgelabz.model.Address;
 import com.bridgelabz.model.Employee;
 
+/**
+ * @author Deepak Prajapati
+ * @Description This class is used to communicate with the database.
+ *
+ */
 public class EmployeeDao {
+	/**
+	 * @return boolean
+	 * @Description This method is used to insert the employee data into the database,
+	 * It will return true if Employee data is inserted otherwise it will return false.
+	 */
+	@SuppressWarnings("resource")
 	public boolean insertEmployee()
 	{
 		boolean check=false;
@@ -55,7 +66,7 @@ public class EmployeeDao {
 			session.close();
 			check=true;
 		}catch (Exception e) {
-			return check;
+			return check=false;
 		}
 		return check;
 		

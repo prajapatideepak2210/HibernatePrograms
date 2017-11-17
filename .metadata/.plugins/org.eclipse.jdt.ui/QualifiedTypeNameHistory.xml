@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.persistence.Table"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.bridgelabz.model.EmployeeBean"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
@@ -9,12 +8,22 @@
 <fullyQualifiedTypeName name="org.hibernate.hql.internal.ast.tree.CollectionFunction"/>
 <fullyQualifiedTypeName name="javax.security.auth.login.Configuration"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
 <fullyQualifiedTypeName name="Dao.DaoUtility"/>
+<fullyQualifiedTypeName name="org.hibernate.Criteria"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Projections"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
+<fullyQualifiedTypeName name="Model.Student"/>
 <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
 <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
 <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+<fullyQualifiedTypeName name="com.bridgelabz.model.Employee"/>
+<fullyQualifiedTypeName name="com.bridgelabz.model.Address"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="Model.Student"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.hibernate.query.Query"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.bridgelabz.dao.EmployeeDao"/>
 </qualifiedTypeNameHistroy>

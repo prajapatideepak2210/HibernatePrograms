@@ -1,9 +1,12 @@
 package com.bridgelabz.controller;
 
-import java.util.Scanner;
-
 import com.bridgelabz.dao.EmployeeDao;
 
+/**
+ * @author Deepak Prajapati
+ * @Description this class is used to store the employee details into the database.
+ *
+ */
 public class Store {
 	public static void main(String[] args) {
 		EmployeeDao employeeDao=new EmployeeDao();

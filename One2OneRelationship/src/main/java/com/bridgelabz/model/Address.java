@@ -1,5 +1,9 @@
 package com.bridgelabz.model;
 
+/**
+ * @author This class is the model class here you will find the address of employee.
+ *
+ */
 public class Address {
 	private int addressId;  
 	private String addressLine1,city,state,country;  

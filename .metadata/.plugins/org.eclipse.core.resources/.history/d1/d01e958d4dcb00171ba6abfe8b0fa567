@@ -1,0 +1,9 @@
+package com.bridgelabz.model;
+
+public class Address {
+	private int flateNumber;
+	private String apartmentAndColony;
+	private String city;
+	private String state;
+
+}

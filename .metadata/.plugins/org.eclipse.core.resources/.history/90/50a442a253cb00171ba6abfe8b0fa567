@@ -1,0 +1,13 @@
+package com.bridgelabz.dao;
+
+import com.bridgelabz.model.Employee;
+
+public class EmployeeDao{
+	public boolean insert()
+	{
+		boolean check=false;
+		Employee employee=new Employee();
+		
+		return check;
+	}
+}

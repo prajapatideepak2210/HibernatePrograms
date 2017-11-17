@@ -1,0 +1,10 @@
+package com.bridgelabz.dao;
+
+public class EmployeeDao{
+	public boolean insert()
+	{
+		private boolean check=false;
+		
+		return check;
+	}
+}

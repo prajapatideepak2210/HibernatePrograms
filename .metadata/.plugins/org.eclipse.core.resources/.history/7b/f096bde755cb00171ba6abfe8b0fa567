@@ -1,0 +1,25 @@
+package com.bridgelabz.dao;
+
+import java.util.Scanner;
+
+import com.bridgelabz.model.Employee;
+import com.bridgelabz.model.Vehicle;
+
+public class EmployeeDao{
+	public boolean insert()
+	{
+		boolean check=false;
+		Scanner scanner=new Scanner(System.in);
+		Employee employee=new Employee();
+		Vehicle vehicle=new Vehicle();
+		
+		System.out.println("Enter the EmployeeName : ");
+		String employeeName=scanner.nextLine();
+		System.out.println("Enter the Gender : ");
+		String employeeGender=scanner.nextLine();
+		System.out.println("Enter the VehicleName : ");
+		String vehicleName=scanner.nextLine();
+		
+		return check;
+	}
+}
