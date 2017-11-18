@@ -59,6 +59,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.brigelabz.ChacheExample"/>
 			<item value="com.brigelabz.OneToManyRelationship"/>
 			<item value="com.brigelabz.One2OneRelationship"/>
 			<item value="com.brigelabz.HibernateCrud"/>
@@ -70,6 +71,7 @@
 			<item value="com.brigelabz"/>
 		</list>
 		<list key="artifactId">
+			<item value="ChacheExample"/>
 			<item value="OneToManyRelationship"/>
 			<item value="One2OneRelationship"/>
 			<item value="HibernateCrud"/>
